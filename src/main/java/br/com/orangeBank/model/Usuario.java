@@ -1,22 +1,30 @@
 package br.com.orangeBank.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.sql.Date;
 
 
 @Entity
 @Table(name="usuario")
 public class Usuario {
+
     @Column
+    @NotNull
     private String nome;
 
     @Column(unique = true)
+    @Email(message = "insira um e-mail válido")
+    @NotNull
     private String email;
 
     @Column
+    @NotNull
     private Date dataDeNascimento;
 
     @Column(unique = true)
+    @NotNull
     private String cpf;
 
     @Column
