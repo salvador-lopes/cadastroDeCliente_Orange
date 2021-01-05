@@ -10,7 +10,7 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class UsuarioDAOIm implements UsuarioDAO{
+public class UsuarioDAOImpl implements UsuarioDAO{
     @Autowired
     private EntityManager entityManager;
 
